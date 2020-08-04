@@ -1,0 +1,1321 @@
+﻿body {
+    background-color: #f6f5f5 !important;
+   
+
+}
+
+
+#DropDownMenu {
+    position:absolute;
+  
+    right:-6px;
+    top:-10px;
+}
+
+    #DropDownMenu > li {
+
+        list-style: none;
+        float: left;
+      z-index:9999;
+        width: 150px;
+        /*border:1px solid blue;*/
+    }
+
+
+        #DropDownMenu > li > a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        #DropDownMenu > li:nth-child(1) {
+            padding-left: 20px;
+            margin-left: -80px;
+            height: 20px;
+            border-right: 1px solid gray;
+        }
+
+
+        #DropDownMenu > li:nth-child(2) {
+            width: 120px;
+            padding-left: 12px;
+        }
+
+
+#subMenu1 {
+   
+    position: absolute;
+    z-index: 99999 !important; 
+
+    width:130px;
+    background-color: white !important;
+    box-shadow: 2px 2px 2px gray;
+    display: none;
+}
+
+    #subMenu1 > li {
+        list-style: none;
+        width: 150px;
+    }
+
+
+        #subMenu1 > li > a {
+            color: black;
+            text-decoration: none;
+            margin-left: -40px;
+        }
+
+
+#subMenu2 {
+    box-shadow: 2px 2px 2px gray;
+    width:115px !important;
+    display: none;
+}
+
+    #subMenu2 > li {
+        list-style: none;
+        /*border:1px solid red;*/
+        width:150px !important;
+        margin-left:-50px !important;
+    }
+
+
+        #subMenu2 > li > a {
+            color: black;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+
+
+#myTabs {
+    position:absolute;
+    top:98px;
+    width:1000px;
+    height:40px;
+    /*border:1px solid black;*/
+}
+
+    #myTabs > li {
+        list-style: none;
+        float: left;
+        width: 150px;
+    }
+
+
+        #myTabs > li a {
+            color:black;
+            font-size:1.4em;
+            text-decoration:none;
+        }
+
+        /*#myTabs > li > a:hover {
+            color: #ff6a00 !important;
+        }*/
+
+
+
+        #myTabs > li:nth-child(1) {
+            margin-left: 150px
+        }
+
+
+
+        #myTabs > li:nth-child(2) {
+            margin-left:-45px;
+            width:210px;
+        }
+
+    
+        #myTabs > li:nth-child(3) {
+            margin-left: -25px;
+            
+        }
+
+        #myTabs > li:nth-child(4) {
+            margin-left:-5px;
+        }
+
+
+        #myTabs > li:nth-child(5) {
+            margin-left: -100px;
+        }
+
+
+        /*#myTabs > li:nth-child(6) {
+            margin-left: -90px;
+        }*/
+
+
+        #small-480-menu-div > ul {
+            position:absolute;
+            right:10px;
+        }
+
+        #small-480-menu-div > ul > li {
+           
+            margin-top:12px;
+            list-style:none;
+            float:left;
+            width:30px;
+
+        }
+
+            #small-480-menu-div > ul > li > a {
+                list-style: none;
+                font-size: 1.1em;
+                color:gray;
+            }
+
+            #small-480-menu-div > ul > li:nth-child(3) {
+            margin-top:11px;
+            }
+
+
+#produkt-menu {
+    margin-top: 0;
+    margin-left: -1.3%;
+    width: 100%;
+    height: 50px;
+}
+
+    #produkt-menu > li {
+        list-style: none;
+        float: left;
+        height: 50px;
+        line-height: 50px;
+    }
+
+        #produkt-menu > li > a {
+            font-size: 14px;
+            font-family:'Adobe Caslon Pro';
+            color: black;
+            font-weight:500;
+            text-decoration: none;
+        }
+
+
+  
+            #produkt-menu > li > a:hover {
+                color: #0f62b2;
+            }
+
+
+/*#produkt-menu-tablet > ul {
+
+}*/
+
+    #produkt-menu-tablet > ul > li {
+        list-style: none;
+        width: 500px;
+       
+        float: left;
+        margin-left: -20px;
+        margin-top: 20px;
+      
+       
+    }
+
+        #produkt-menu-tablet > ul > li > a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em; 
+          
+        }
+
+
+            #produkt-menu-tablet > ul > li > a:hover {
+                color: #7acceb !important;
+              
+                
+            }
+
+
+
+
+#produkt-menu-smart {
+
+    width: 100% !important;
+    height: auto !important;
+    background-color: #484444 !important;
+    left: -10px !important;
+    top: 105px;
+}
+
+    produkt-menu-smart > ul {
+        top: 50px !important;
+        
+    }
+
+        #produkt-menu-smart > ul > li:nth-child(1) {
+            margin-top: 13px !important;
+        }
+
+            #produkt-menu-smart > ul > li {
+                list-style: none;
+                width: 100% !important;
+                height: 7px !important;
+                /*float: left;border: 1px solid red !important;*/
+            }
+
+
+                #produkt-menu-smart > ul > li > a {
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.1em;
+                    height:25px;
+                    width:500px;
+                    outline:none;
+                }
+
+
+
+                    #produkt-menu-smart > ul > li > a:hover {
+                    
+                        display:table-cell;
+                        background-color:#3c45e6;
+                    }
+
+
+
+
+#ul-white {
+    margin-left: -18%;
+    list-style: none;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: Arial;
+}
+
+
+#left-menu {
+    position: absolute;
+    z-index: 1010;
+    left: 0;
+    top: 10px;
+    width: 185px;
+    /*display: table-cell;*/
+    height: auto;
+    opacity: 0.9;
+}
+
+    #left-menu > li {
+        margin-top: 2px;
+        list-style: none;
+        transition: 0.2s;
+    }
+
+
+        #left-menu > li > p > a {
+            color: black;
+            text-decoration: none;
+            left: 0;
+        }
+
+
+
+#left-menu {
+    position: absolute;
+    z-index: 1010;
+    left: 0;
+    top: 10px;
+    width: 185px;
+    height: auto;
+    opacity: 0.9;
+}
+
+#left-menu2 > li {
+    margin-top: 2px;
+    list-style: none;
+}
+
+
+    #left-menu2 > li > p > a {
+        color: black;
+        text-decoration: none;
+        left: 0;
+    }
+
+
+
+
+#left-menu > li.active {
+    background-color: #0094ff;
+}
+
+
+
+
+#left-menu-smart {
+
+    width:98%;
+    top:420px !important;
+    right:4.9%!important;
+
+}
+
+    #left-menu-smart > li {
+
+        margin-right:3px !important;
+        list-style:none;
+        width:18% !important;
+        height:60px !important;
+        transition:all 0.1s ease-in-out !important;
+        float:left !important;
+        background-color:#efeded;    
+        
+    }
+
+        #left-menu-smart > li > a {
+        
+            outline: none !important;
+
+        }
+
+        #left-menu-smart > li > a > span {
+            color: black !important;
+            margin-top: 24px;
+            margin-left: 42% !important;
+            
+        }
+
+
+        #footer-menu-smart {
+            margin-top:20px !important;
+            margin-left:-20px !important;
+        }
+
+            #footer-menu-smart > li {
+
+                list-style:none;
+                /*margin-left: auto !important;*/
+                margin-bottom:-22px;
+            }
+
+
+
+#index-wrapper-laptop {
+
+    display:block !important;
+}
+
+
+
+
+
+
+
+/*============================ Media 1000 =============================================================1000=====================================*/
+@media only screen and (min-width:640px) and (max-width:1005px) {
+    #registrieren {
+        display: none !important;
+    }
+
+
+    #layout-wrapper {
+        width: 99.5% !important;
+        /*margin-right: -25% !important;*/
+    }
+
+    #DropDownMenu {
+        position: absolute !important;
+        right: -2px !important;
+    }
+
+
+
+
+    #myTabs > li:nth-child(1) {
+        margin-left: 135px;
+    }
+
+    #myTabs > li:nth-child(2) {
+        margin-left: -60px !important;
+    }
+
+    #myTabs > li:nth-child(3) {
+        margin-left: -45px !important;
+    }
+
+    #myTabs > li:nth-child(4) {
+        margin-left: -20px !important;
+    }
+
+    #myTabs > li:nth-child(5) {
+        margin-left: -109px !important;
+    }
+
+
+    #img-versicherung {
+        width: 150px !important;
+        height: 75px;
+    }
+
+
+    #agentur-suchen-mask {
+        top: 45px !important;
+    }
+
+
+    /*agentur suchen*/
+    #agentur-suchen {
+        top: 35px !important;
+        right: 10px !important;
+    }
+
+    /*agentur dialog*/
+    #agentur-dialog {
+        top: 80px !important;
+        right: 10px !important;
+    }
+
+    /*img arrow*/
+    #img-arrow {
+        top: 45px !important;
+        z-index: 999 !important;
+        right: 20px !important;
+    }
+
+    #myTabs > li > a {
+        font-size: 1.3em;
+    }
+
+
+    #registrieren {
+        display: none !important;
+    }
+
+
+    main {
+        /*margin-top:300px !important;*/
+        width: 100%;
+    }
+
+
+    /*myTabs-mask*/
+    #myTabs-mask1 {
+        left: 165px !important;
+        width: 90px !important;
+    }
+
+    #myTabs-mask2 {
+        left: 260px !important;
+        width: 160px !important;
+    }
+
+    #myTabs-mask3 {
+        left: 425px !important;
+        width: 120px !important;
+    }
+
+    #myTabs-mask4 {
+        left: 550px !important;
+        width: 40px !important;
+    }
+
+
+    #myTabs-mask5 {
+        left: 595px !important;
+        width: 40px !important;
+    }
+
+
+
+    /*line*/
+    #line1 {
+        left: 170px !important;
+        width: 85px !important;
+    }
+
+    #line2 {
+        left: 260px !important;
+        width: 160px !important;
+    }
+
+
+    #line3 {
+        left: 425px !important;
+        width: 120px !important;
+    }
+
+    #line4 {
+        left: 550px !important;
+        width: 40px !important;
+    }
+
+
+    #line5 {
+        left: 595px !important;
+        width: 40px !important;
+    }
+
+
+
+
+    /*textBox1*/
+    #textBox1 {
+        position: absolute !important;
+        max-width: 93.8% !important;
+    }
+
+
+    #textBoxDiv {
+        width: 85.2% !important;
+    }
+
+    #textBoxButton {
+        position: absolute !important;
+        left: 94.8% !important;
+        top: 1px !important;
+    }
+
+
+    /*#menuDiv {
+    
+        display:none !important;
+    }*/
+
+    #button-div {
+        display: none !important;
+    }
+
+
+    /*#button-div-tablet {
+        display: block !important;
+    }*/
+
+
+    #smartphone-480-mini-textBox-div {
+        display: none !important;
+    }
+
+
+    #produkt-menu-smart {
+        display: none !important;
+    }
+
+
+    #ul-div-wrapper1 {
+        display: none;
+        left: 50%;
+    }
+
+
+    #ul-div-item1-background {
+        display: none;
+    }
+
+    #ul-div-wrapper2 {
+        display: none;
+    }
+
+
+    #ul-div-item2-background {
+        display: none;
+    }
+
+    #ul-div-wrapper3 {
+        display: none;
+    }
+
+
+    #ul-div-item3-background {
+        display: none;
+    }
+
+
+    #dynamic-text {
+        left: 250px !important;
+    }
+
+
+
+  
+
+
+    #kfz-schaden-div {
+        width: 100% !important;
+        height: 150px !important;
+        margin-top: 30px !important;
+      
+    }
+
+
+    #btn-kfz-schaden {
+
+        width:230px !important;
+    }
+
+
+    #btn-kfz-schaden-div-right {
+    
+        margin-top:0px;
+        margin-left:-33px;
+    }
+
+    #krankenvers-div > #float-right > p > span {
+        font-size: 0.9em !important;
+    }
+
+
+
+    .produkt-menu-tablet-list-class > li > a {
+        outline: none !important;
+    }
+
+
+
+    /*#youtube-div-backgraound {
+    
+        display:block !important;
+
+    }*/
+
+
+    #youtube-div {
+        display: none !important;
+    }
+
+    #youtube-ul {
+        display: none !important;
+    }
+
+
+    #youtube-div-tablet {
+        display: block !important;
+    }
+
+
+    #index-wrapper-laptop {
+        display: none !important;
+    }
+
+    #index-wrapper-tablet {
+        display: block !important;
+    }
+
+    
+
+   }
+        
+
+
+/*============================media 640===================================================640============================================*/
+
+
+@media only screen and (max-width:640px) {
+
+
+
+
+    #textillate1 {
+        display: none !important;
+    }
+
+
+    #textillate2 {
+        display: none !important;
+    }
+
+    #myTabs {
+        display: none !important;
+    }
+
+
+    #beginDiv {
+        display: none !important;
+    }
+
+    main {
+        margin-top: 50px !important;
+    }
+
+    #small-480-menu-div {
+        display: block !important;
+    }
+
+
+        #small-480-menu-div > ul > li {
+            margin-top: 0px !important;
+            width: 45px !important;
+            height: 50px !important;
+            /*border:1px solid rgba(0,0,0,1.00) !important;*/
+        }
+
+
+            /*#small-480-menu-div > ul > li:nth-child(1) {
+        
+        }*/
+
+
+            #small-480-menu-div > ul > li > a > span {
+                margin-top: 15px;
+                margin-left: 14px;
+            }
+
+
+            #small-480-menu-div > ul > li > a > img {
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+
+
+    #myTabs-div {
+        display: none !important;
+    }
+
+
+
+    #img-versicherung {
+        /*position:absolute!important;*/
+        top: 1px !important;
+        width: 130px !important;
+        height: 60px !important;
+        right: 50px !important;
+        /*display:none;*/
+    }
+
+
+    #registrieren {
+        display: none;
+    }
+
+    #agentur-suchen {
+        display: none;
+    }
+
+
+
+    #agentur-suchen-mask {
+        display: none;
+    }
+
+    #img-arrow {
+        display: none !important;
+    }
+
+
+    #layout-wrapper {
+        width: 500px !important;
+    }
+
+    #img-arrow {
+        display: none;
+    }
+
+    #class-info {
+        display: none;
+    }
+
+    #textBoxDiv {
+        display: none;
+    }
+
+
+    #DropDownMenu {
+        display: none !important;
+    }
+
+
+    #myTabs-mask1 {
+        display: none !important;
+    }
+
+    #myTabs-mask2 {
+        display: none !important;
+    }
+
+    #myTabs-mask3 {
+        display: none !important;
+    }
+
+
+    #myTabs-mask4 {
+        display: none !important;
+    }
+
+
+    #myTabs-mask5 {
+        display: none !important;
+    }
+
+
+    #line5 {
+        display: none;
+    }
+
+
+    #agentur-dialog {
+        top: 80px !important;
+        left: -30px !important;
+        width: 600px !important;
+    }
+
+
+    #textBoxDiv {
+        display: none !important;
+    }
+
+
+    #button-div {
+        display: none !important;
+    }
+
+    #button-div-background {
+        display: none !important;
+    }
+
+
+
+    #myCarousel {
+        top: 30px !important;
+
+    }
+
+    #hr-div {
+        display: none !important;
+    }
+
+    .carousel-indicators {
+        visibility: hidden !important;
+    }
+
+
+    /*------------------*/
+
+    #ul-div-item1-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item1-tablet-background {
+        display: none !important;
+    }
+
+
+    #ul-div-item2-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item2-tablet-background {
+        display: none !important;
+    }
+
+
+    #ul-div-item3-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item3-tablet-background {
+        display: none !important;
+    }
+
+
+    /**-------------*/
+
+    #left-menu {
+        display: none !important;
+    }
+
+
+
+
+    /*logo image*/
+    #img-text {
+        display: none !important;
+    }
+
+    #img-text-backgroud {
+        display: none !important;
+    }
+
+    #img-text2 {
+        display: none !important;
+    }
+
+    #img-text2-background {
+        display: none !important;
+    }
+
+
+    #ul-div-item1-smart:after {
+        content: '';
+        position: absolute;
+        right: -12px;
+        top: 0px;
+        opacity: 0.8;
+        border-right: 40px solid white;
+        border-top: 40px solid darkblue;
+        transform: rotate(90deg);
+        /*content: '';
+                    position: absolute;
+                    z-index:1;
+                    to take nagtive right coordinate
+                    right: -50px;
+                    to take negative top coordinate
+                    top: -35px;
+                    the length of width must be in double size as the negative coordinate to have real length
+                    width: 70px;
+                    the length of  height must be in double size as the negative coordinate to have real length
+                    height: 70px;
+                    it must be rotated in 45 degree
+                    transform: rotate(945deg);
+                    and at last background color of the cutting edge
+                    background-color: rgba(18, 19, 25, 0.94);*/
+    }
+
+    /*ul-laptop*/
+    #ul-div-wrapper1, #ul-div-item1-background {
+        display: none;
+    }
+
+    #ul-div-wrapper2, #ul-div-item2-background {
+        display: none;
+    }
+
+
+    #ul-div-wrapper3, #ul-div-item3-background {
+        display: none;
+    }
+
+
+    /*ul tablet*/
+    #ul-div-item1-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item1-tablet-background {
+        display: none !important;
+    }
+
+    #ul-div-item2-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item2-tablet-background {
+        display: none !important;
+    }
+
+    #ul-div-item3-tablet {
+        display: none !important;
+    }
+
+
+    #ul-div-item3-tablet-background {
+        display: none !important;
+    }
+
+
+    #h3 {
+        font-size: 22px !important;
+    }
+
+
+    #kfz-schaden-div {
+        display: none;
+    }
+
+
+
+    #kfz-schaden-div-smart {
+        display: block !important;
+    }
+
+
+
+    #krankenvers-div > #float-right {
+        flex: none !important;
+        display: none !important;
+    }
+
+
+        #krankenvers-div > #float-right > p > span {
+            font-size: 0.6em !important;
+        }
+
+
+
+
+
+    #krankenvers-div {
+        display: none !important;
+    }
+
+
+    #krankenvers-div1-smart {
+        display: block !important;
+    }
+
+    #krankenvers-div2-smart {
+        display: block !important;
+    }
+
+
+    #img-div {
+        float: none !important;
+        display: none !important;
+    }
+
+
+    #img-div-smart {
+        display: block !important;
+    }
+
+
+    #relative-parent {
+        display: none !important;
+    }
+
+    #absolute-parent1-smart-fake {
+        display: block !important;
+    }
+
+
+     #absolute-parent2-smart-fake {
+    
+            display:block !important;
+        }
+
+
+    #relative-parent2 {
+        visibility: hidden !important;
+    }
+
+
+    #youtube-div {
+    
+        display:none !important;
+    }
+
+
+    #youtube-div-smart {
+    
+        display:block !important; 
+        margin-top:10px !important;
+    }
+
+    #twitter-id-smart {
+        position:absolute;
+        right:20px !important;
+  
+    }
+
+    #twitter-id-smart > li {
+        list-style: none !important;
+        float:left;
+        width:40px;
+        margin-top:6px !important;
+    }
+
+
+    #footer-div, #footer-div-background {
+        display: none !important;
+    }
+
+
+    #footer-menu-smart {
+    
+        display:block !important;
+    }
+
+
+    #index-wrapper-smart {
+    
+        display:block !important;
+    }
+
+    #index-wrapper-laptop {
+    
+        display:none !important;
+
+    }
+
+    #index-wrapper-tablet {
+    
+        display:none !important;
+    }
+
+    #space-rezervasyon-for-index-wrapper {
+        display: block !important;
+    }
+
+
+
+    #kfz-schaden-div-smart-space-reservation {
+        display:block !important;
+    }
+
+    #krankenver-smart-wrapper {
+    
+        display:block !important;
+    }
+
+
+    #krankenver-smart-wrapper-space-reservation {
+    
+        display:block !important;
+    }
+
+
+    #youtube-div-background {
+    
+        display:none !important;
+    }
+
+
+    #youtube-ul {
+    
+        display: none !important;
+    }
+
+  
+
+    #überschrift-smart {
+        display:normal !important;
+    }
+
+
+
+
+    #ul-form-smart {
+    
+
+    }
+
+
+    #registrierung-wrapper-smart {
+    
+        display:block !important;
+    }
+
+
+    #registrierung-ahref-smart {
+   
+        display:block !important;
+    }
+
+
+    #myCarousel {
+
+        left:-39px !important;
+        /*display:none !important;*/
+    }
+
+ }/*end */
+
+
+  /*=========================== end of media 640===================================*/
+
+
+
+
+  /*============================media 1250===================================*/
+
+            @media only screen and (max-width:1350px) {
+
+                #class-info {
+                    display: none;
+                }
+            }
+
+
+
+            @media (min-width:640px) {
+
+                #smartphone-480-mini-textBox-div {
+                    display: none !important;
+                }
+            }
+
+
+            @media (min-width:900px) {
+
+                #produkt-menu-smart {
+                    display: none !important;
+                }
+            }
+
+
+            @media only screen and (min-width:1006px) {
+
+
+                #ul-div-item1-tablet {
+                    display: none !important;
+                }
+
+                #ul-div-item1-tablet-background {
+                    display: none !important;
+                }
+
+
+                #ul-div-item2-tablet {
+                    display: none !important;
+                }
+
+                #ul-div-item2-tablet-background {
+                    display: none !important;
+                }
+
+
+                #ul-div-item3-tablet {
+                    display: none !important;
+                }
+
+                #ul-div-item3-tablet-background {
+                    display: none !important;
+                }
+
+            }
+
+
+@media only screen and (max-width:640px) {
+
+    #smart-button {
+        width: 260px !important;
+    }
+
+    #smart-textBox1, #smart-textBox2 {
+        width: 260px !important;
+    }
+
+    /*.form-control {
+    max-width:260px !important;
+    }*/
+
+
+}
+
+
+@media only screen and (min-width:640px) {
+
+    #left-menu-smart {
+    
+        display:none !important;
+       
+
+    }
+
+    #ul-div-item1-smart {
+    
+        display:none !important;
+    }
+
+
+    #ul-div-item1-smart-background {
+        display: none !important;
+    }
+
+
+    
+}
+
+
+@media only screen and (min-width:540px) and (max-width:640px) {
+
+    #left-menu-smart {
+    right:-10px !important;
+    }
+}

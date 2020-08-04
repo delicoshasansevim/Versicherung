@@ -1,0 +1,1042 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+<!--textBoxDiv-->
+       <div id="textBoxDiv" style="position:absolute;  width:1000px; height:50px;left:0; top:200px; z-index:1; border:rgba(0, 0, 0, 0.00)">
+
+
+           @using (Html.BeginForm("","", FormMethod.Post, new { }))
+           {
+
+               <div style=" width:850px; height:75px; left:0; top:25px;  float:left;">
+                   @Html.TextBox("textBox1", "Wie können wir Ihnen helfen ?", new { @class = "form-control", value = "Wie können wir Ihnen helfen ?", style = " font-size:2.2rem; max-width:850px; height:45px; ", id = "textBox1" })
+               </div>
+
+               <div style="float:left; margin-left:25px; margin-top:1px; width:120px;">
+                   <input type="submit"  style="width:120px; height:43px;" value="Suche" class="btn btn-primary"
+                          id="textBoxButton"
+                          data-toggle="popover"
+                          data-trigger="hover"
+                          data-html="true"
+                          data-animation=""
+                          data-delay=""
+                          title="this is tooltip"
+                          data-content="<img class='img-responsive' src='/Images/nature1.jpg' />"
+                          data-placement="right" />
+
+               </div>
+           }
+
+
+    </div>
+
+
+
+
+<!--carousel-->
+<div id="myCarousel" class="carousel" data-ride="carousel"  style="width:1000px;  top:500px; height:400px;">
+
+    <!--carousel-indicators-->
+        <ol  class="carousel-indicators">
+            <li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+
+
+    <!--carousel-inner-->
+    <div class="carousel-inner">
+
+    <!--item1-->
+        <div class="item active" id="item1">
+
+            <img id="img-item1" src="~/Images/venedik1.jpg" style="width:1000px; height:400px" />
+
+            <!--ul-div1-wrapper-->
+            <div id="ul-div-wrapper1" style="position:absolute; left:69%; top:20px;  height:400px; z-index:999; color:#fff;">
+                <br />
+
+                <h5>Tierkrankenversicherung</h5>
+                <h3 style="margin-left:-2%">Umfassender Schutz <br /> für Ihre Gesundheit</h3>
+
+                <ul id="ul-div-item1"> 
+                    <li><span class="glyphicon glyphicon-ok">  Bis zu 10.000€ <br />Erstattung  von OP-Kosten</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Klinikwahl</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Schutzwahl</span></li>
+                    <li style="margin-top:10px;"><input type="submit" class="btn btn-warning" onclick="alert('Mehr Information');" value="Mehr Information" /></li>
+                </ul>
+
+            </div>
+
+
+            <div id="ul-div-item1-background" style=""></div>
+
+
+
+            <!--left-menu1-->
+                <ul id="left-menu">
+                    <li id="left-menu-item1" style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS'  ">
+                        <p>
+                            <span class="glyphicon glyphicon-asterisk" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+                        <p style="margin-top:-10px; margin-left:5px;">
+                            <!--a href-->
+                            <a href="#" data-target="#myCarousel" data-slide-to="1"> Berufsunfaehigkeits- <br /> Versicherung</a>
+                        </p>
+                    </li>
+
+                    <li id="left-menu-item2" style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-globe" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="2">Baufinazierung</a>
+
+                        </p>
+
+                    </li>
+
+
+                    <li id="left-menu-item3" class="active" style="width:105%; height:70px; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-plane" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="0">Kfz-Versicherung</a>
+                        </p>
+                    </li>
+
+
+
+                    <li id="left-menu-item4" style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bishop" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="javascript:alert('no link');">Private-Kranken <br />Versicherung</a>
+                        </p>
+
+                    </li>
+
+                    <li id="left-menu-item5" style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bed" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:2px;">
+                            <a href="javascript:alert('no link');">Private- <br /> Haftplichtversicherung</a>
+                        </p>
+
+                    </li>
+
+                </ul>
+            
+            <!--end of left menu 1-->        
+
+
+     
+        </div> <!--end of index1-->
+
+
+    <!--item2-->
+        <div class="item" id="item2">
+
+            <img src="~/Images/weg4.jpg" style="width:1000px; height:400px"  />
+
+            <!--ul-div2-wrapper-->
+            <div id="ul-div-wrapper2" style="position:absolute; left:69%; top:20px;  height:400px; z-index:999; color:#fff;">
+                <br />
+
+                <h5>Tierkrankenversicherung</h5>
+                <h3 style="margin-left:-2%">Umfassender Schutz <br /> für Ihre Gesundheit</h3>
+
+                <ul id="ul-div-item2">
+                    <li><span class="glyphicon glyphicon-ok">  Bis zu 10.000€ <br />Erstattung  von OP-Kosten</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Klinikwahl</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Schutzwahl</span></li>
+                    <li style="margin-top:10px;"><a href="javascript:alert('Mehr Information');" class="btn btn-warning">Mehr Information</a></li>
+                </ul>
+
+            </div>
+
+
+            <div id="ul-div-item2-background" style=""></div>
+
+
+            <!--do something-->
+            <p id="img-text" style="width:100px; height:100px; position:absolute; z-index:1008; left:273px; top:70px; color:black">
+                <span style="font-size:22px;  font-family:Arial; text-shadow:2px 2px 0 white"> Volltilger Aktion <br /></span>
+                <span style="font-style:italic; color:black;"> bis 01.11.2017</span>
+            </p>
+
+            <img id="img-text-backgroud" src="~/images/kare4.png"
+                 class="img-circle"
+                 style="position:absolute; box-shadow:3px 6px 16px black; width:130px; height:130px; left:250px; top:50px;" />
+
+
+            <!--left-menu2-->
+            <div>
+                <ul id="left-menu">
+                    <li class="active" style="width:105%; height:70px;font-family:'Arial Unicode MS' ">
+                        <p>
+                            <span class="glyphicon glyphicon-asterisk" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+                        <p style="margin-top:-10px; margin-left:5px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="1"> Berufsunfaehigkeits- <br /> Versicherung</a>
+                        </p>
+                    </li>
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-globe" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="2">Baufinazierung</a>
+                        </p>
+
+                    </li>
+
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-plane" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="0">Kfz-Versicherung</a>
+                        </p>
+                    </li>
+
+
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bishop" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#">Private-Kranken <br />Versicherung</a>
+                        </p>
+
+                    </li>
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bed" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:2px;">
+                            <a href="#">Private- <br /> Haftplichtversicherung</a>
+                        </p>
+
+                    </li>
+
+                </ul>
+
+
+            </div> <!--end of left menu2-->
+
+
+
+        </div> <!--en of item2-->
+
+
+
+    <!--item3-->
+        <div class="item" id="item3">
+
+            <img src="~/Images/Abstract12.jpg" style="width:1000px; height:400px" />
+
+            <!--ul-div3-wrapper-->
+            <div id="ul-div-wrapper3" style="position:absolute; left:69%; top:20px;  height:400px; z-index:999; color:#000;">
+                <br />
+
+                <h5>Tierkrankenversicherung</h5>
+                <h3 style="margin-left:-2%">Umfassender Schutz <br /> für Ihre Gesundheit</h3>
+
+                <ul id="ul-div-item3">
+                    <li><span class="glyphicon glyphicon-ok">  Bis zu 10.000€ <br />Erstattung  von OP-Kosten</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Klinikwahl</span></li>
+                    <li><span class="glyphicon glyphicon-ok"> Freie Tierarzt- und <br /> Schutzwahl</span></li>
+                    <li style="margin-top:10px;"><a href="javascript:alert('Mehr Information');"class="btn btn-warning" >Mehr Information</a></li>
+                </ul>
+
+            </div>
+
+
+            <div id="ul-div-item3-background" style=""></div>
+
+
+            <!--info logo text-->
+            <p id="img-text2" style="width:100px; height:100px; position:absolute; z-index:1008; left:273px; top:70px; color:black">
+                <span style="font-size:22px;  font-family:Arial; text-shadow:2px 2px 0 white"> Volltilger Aktion <br /></span>
+                <span style="font-style:italic; color:black;"> bis 01.11.2017</span>
+            </p>
+
+        <!--info logo-->
+            <img id="img-text2-background" src="~/images/kare4.png"
+                 class="img-circle"
+                 style="position:absolute; box-shadow:3px 6px 16px black; width:130px; height:130px; left:250px; top:50px;" />
+
+
+            <!--left-menu3-->
+            <div>
+                <ul id="left-menu">
+                    <li style="width:100%; height:70px;font-family:'Arial Unicode MS'; background-color:white; ">
+                        <p>
+                            <span class="glyphicon glyphicon-asterisk" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+                        <p style="margin-top:-10px; margin-left:5px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="1"> Berufsunfaehigkeits- <br /> Versicherung</a>
+                        </p>
+                    </li>
+
+                    <li class="active" style="width:105%; height:70px;  font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-globe" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="2">Baufinazierung</a>
+                        </p>
+
+                    </li>
+
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-plane" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#" data-target="#myCarousel" data-slide-to="0">Kfz-Versicherung</a>
+                        </p>
+                    </li>
+
+
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bishop" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:20px;">
+                            <a href="#">Private-Kranken <br />Versicherung</a>
+                        </p>
+
+                    </li>
+
+                    <li style="width:100%; height:70px; background-color:white; font-family:'Arial Unicode MS' ">
+
+
+                        <p>
+                            <span class="glyphicon glyphicon-bed" style="margin-left:60px; margin-top:10px;"></span>
+                        </p>
+
+                        <p style="margin-top:-10px; margin-left:2px;">
+                            <a href="#">Private- <br /> Haftplichtversicherung</a>
+                        </p>
+
+                    </li>
+
+                </ul>
+
+
+            </div> <!--end of left menu3-->
+
+        </div> <!--end of item3-->
+
+    </div> <!--carousel inner-->
+
+  </div> <!--end of carousel----------------------------------------->
+
+<div id="index-wrapper-laptop" style="position:relative;  width:100%; display:none; height:400px; margin-top:535px; ">
+
+
+        <article id="article1" style="width:329px; margin-right:5px; float:left; height:400px; background-color:white; ">
+            <img src="/Images/images01.jpg" style="width:100%; height:150px;" />
+
+            <p id="p-index">
+                <h3 id="h3" style="margin-left:10px;">Betriebliche Alters­vorsorge berechnen</h3>
+            </p>
+
+            <p style="margin-left:10px;">Berechnen Sie jetzt mit dem betriebliche Altersvorsorge Rechner die finanziellen <br />Vorteile einer Betriebsrente. </p>
+        </article>
+
+
+
+
+        <article id="article2" style="width:329px;  margin-right:5px; float:left; height:400px; background-color:white; ">
+            <img src="/Images/kinder2.jpg" style="width:100%; height:150px;" />
+            <p style="height:auto; background-color:ghostwhite; font-family:Arial;">
+                <h3 style="margin-left:10px;">PrivatSchutz</h3>
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px; " />Ein Vertrag, ein Preis<br />
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto ; margin-right:10px; margin-left:10px;" />Jetzt mit Konfigurator und individuellen<br /> <span style="margin-left:39px;"> Empfehlungen</span><br />
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto ; margin-right:6px; margin-left:10px;" /> Plus: Bis zu 20% Kombirabatt
+            </p>
+        </article>
+
+
+
+
+
+
+        <article id="article3" style="width:330px; height:400px; float:left; background-color:white; ">
+            <img src="/Images/taschenrechner2.jpg" style="width:100%; height:150px;" />
+
+            <h3 style="margin-left:10px">Die clevere Alternative <br />zum Tagesgeld</h3>
+            <p>
+
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Feste, attraktive Verzinsung <br /> <span style="margin-left:40px; "> jeweils für drei Monate </span>
+                <br />
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Kurzfristige Verfügbarkeit<br />
+                <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Hohe Sicherheit
+            </p>
+        </article>
+
+    </div>
+
+
+
+
+<div id="index-wrapper-tablet" style="position:relative; display:none; width:100%; height:1200px; margin-top:535px;">
+
+
+        <div style="position:relative; width:330px;  height:400px; background-color:red; margin:0 auto;">
+            <article id="article1" style="width:330px; margin-right:5px; height:400px; background-color:white; ">
+                <img src="/Images/images01.jpg" style="width:100%; height:150px;" />
+
+                <p id="p-index">
+                    <h3 id="h3" style="margin-left:10px;">Betriebliche Alters­vorsorge berechnen</h3>
+                </p>
+
+                <p style="margin-left:10px;">Berechnen Sie jetzt mit dem betriebliche Altersvorsorge Rechner die finanziellen <br />Vorteile einer Betriebsrente. </p>
+            </article>
+        </div>
+
+
+
+        <div style="position:relative; width:330px;  height:400px; background-color:green; margin:0 auto;">
+
+            <article id="article2" style="width:330px;  margin-right:5px; height:400px; background-color:white; ">
+                <img src="/Images/kinder2.jpg" style="width:100%; height:150px;" />
+                <p style="height:auto; background-color:ghostwhite; font-family:Arial;">
+                    <h3 style="margin-left:10px;">PrivatSchutz</h3>
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px; " />Ein Vertrag, ein Preis<br />
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto ; margin-right:10px; margin-left:10px;" />Jetzt mit Konfigurator und individuellen<br /> <span style="margin-left:39px;"> Empfehlungen</span><br />
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto ; margin-right:6px; margin-left:10px;" /> Plus: Bis zu 20% Kombirabatt
+                </p>
+            </article>
+
+
+        </div>
+
+
+
+
+        <div style="position:relative; width:330px;  height:400px; background-color:orange; margin:0 auto;">
+
+
+            <article id="article3" style="width:330px; height:400px; background-color:white; ">
+                <img src="/Images/taschenrechner2.jpg" style="width:100%; height:150px;" />
+
+                <h3 style="margin-left:10px">Die clevere Alternative <br />zum Tagesgeld</h3>
+                <p>
+
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Feste, attraktive Verzinsung <br /> <span style="margin-left:40px; "> jeweils für drei Monate </span>
+                    <br />
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Kurzfristige Verfügbarkeit<br />
+                    <img src="/images/haeckchen4.png" style="width:20px; height:auto; margin-right:10px; margin-left:10px" />Hohe Sicherheit
+                </p>
+            </article>
+
+        </div>
+</div>
+
+
+
+<!--space rezervasyon for index-wrapper-->
+<div id="space-rezervasyon-for-index-wrapper" style="position:relative; display:none; width:100%; height:1200px; margin-top:50px;">  
+</div>
+
+
+
+
+
+<!--kfz-schaden-div-->
+<div id="kfz-schaden-div" style="width:100%; height:100px;background-color:#264ec1; margin-top:35px;">
+
+    <div id="btn-kfz-schaden-div-left" style="width:62%; height:100px; margin-top:30px;
+                    font-size:16px; font-family:Arial; float:left; color:white; font-family:'Arial Unicode MS'">
+        <p style="margin-left:5%;">
+            Sie haben einen Schaden an Ihrem Fahrzeug? <br /> Oder haben Sie ein anderes
+            Fahrzeug beschädigt? Wir helfen Ihnen gerne weiter.
+        </p>
+    </div>
+
+
+    <div id="btn-kfz-schaden-div-right" style="width:38%; height:100px; float:left">
+        <input type="submit" id="btn-kfz-schaden" onclick="alert('Kfz-Schaden');" value="Kfz Schaden melden" class="btn btn-warning"
+               style="width:250px;
+                          font-size:20px; margin-top:30px; margin-left:15%;" />
+    </div>
+
+</div>
+
+
+
+<!--kfz-schaden-div-smart-space-reservation-->
+<div id="kfz-schaden-div-smart-space-reservation" style="display:none; width:330px;  height:260px; margin-top:30px;">
+
+
+</div>
+
+
+
+<!--krankenvers-div-->
+<section id="krankenvers-div"  style=" width:100%; height:350px;   margin-top:30px;clear:both;">
+
+  <article id="float-left" style="width:33.33333%; height:350px; float:left ">
+      <img src="/Images/telefon4.jpg" style="width:350px; height:350px;" />
+  </article>
+
+
+    <!--krankenver-text-div--->
+    <article id="float-right" style="width:66.666666%; height:350px; overflow:scroll; background-color:white; float:left ">
+        <p style="font-family:Arial; font-size:18px;font-family:'Courier New'; margin-top:20px; margin-left:2%; ">
+            <a href="#">Krankenversicherung</a> <span>2.0 – einfach, sicher, digital
+            Reichen Sie Ihre Rechnungen per App ein und verfolgen Sie online den Bearbeitungsstand.<br /> Das sind unsere neuen digitalen Services:
+
+            Rechnungen per App einreichen: Sie können alle Arztrechnungen online einreichen und damit Zeit und Portokosten sparen.
+            Mit dem <mark>BONUS-Check</mark> – Beitragsrückerstattung einfach berechnen.
+            Bearbeitungsstand im Online-Portal Meine Verischerung: Sie bekommen maximale Transparenz über die Bearbeitungsprozesse Ihrer eingereichten Belege. Auf Wunsch auch per E-Mail- und SMS-Benachrichtigung.
+       </span>  </p>
+    </article>
+
+</section>
+
+
+
+<!--krankenvers-div-smart-->
+<div id="krankenver-smart-wrapper-space-reservation" style="position:relative; display:none; width:100%; height:480px; margin-top:50px;">
+
+</div>
+
+
+
+
+ <!--panel 1-->
+<!---->
+<div id="relative-parent" class="panel panel-default" style="position:relative; margin-left:0px; margin-right:0px; margin-top:50px; height:auto;background-color:#f6f6f6">
+
+    <!--relative-child-->
+    <div id="relative-child" class="panel-heading" style=" position:relative; margin-left:20px; margin-right:20px; margin-top:15px; margin-bottom:15px; background-color:white; ">
+
+        <!--a href-->
+        <a id="glyphicon1" data-toggle="collapse" href="#collapse-tablet"
+           style="text-decoration:none;display:table-cell; width:1020px; font-size:1.2em; outline:none;
+                               color:#000;  margin-left:22%; ">
+
+            <p style="margin-left:20px;">
+                Informationen zu Bewertungen und Berechnungsgrundlagen
+            </p>
+
+            <p style="margin-top:-20px;">
+                <span style=" margin-left:97%; color:darkgray" class="glyphicon glyphicon-plus"></span>
+            </p>
+
+            <p style="margin-top:-20px; margin-left:20px;">
+                rund um die Risikolebensversicherungen
+
+            </p>
+
+
+        </a>
+
+    </div>
+
+        <!-------------------------------------->
+            <script type="text/javascript">
+
+                $(document).ready(function () {
+                   
+                    $("#glyphicon1").click(function () {
+                      
+                        if ($("#glyphicon1 > p:nth-of-type(2) > span").attr('class') != "glyphicon glyphicon-minus") {
+
+                            $("#glyphicon1 > p:nth-of-type(2) span").attr("class", "glyphicon glyphicon-minus");
+                        }
+
+                        else {
+
+                            $("#glyphicon1 > p:nth-of-type(2) span").attr("class", "glyphicon glyphicon-plus");
+                        }
+
+                    });
+
+                });
+
+            </script>
+        <!-------------------------------------->
+
+  
+
+
+
+
+    <!--panel body 1-->
+    <div class="panel-body collapse" id="collapse-tablet" style="width:100%; height:auto; margin-top:0px; margin-left:0%; background-color:white">
+        Nachfolgend finden Sie die Quellen der Siegel und weiterer Bewertungen, die wir auf dieser <br />
+        Webseite angegeben haben. Weiterhin können Sie der Auflistung auch zusätzliche Auszeichnungen <br />
+        und Gütesiegel entnehmen, welche die hohe Qualität unserer Produkte belegen.<br />
+        Die Versicherung bietet zwei Risikolebensversicherungsprodukte an:<br />
+
+        Die RisikoLebensversicherung als günstiger Basisschutz ist ein Angebot der Deutschen <br />
+        Lebensversicherungs-AG, einem Unternehmen der deutschen Versicherung.<br />
+
+        Die RisikoLebensversicherung Plus als Premiumschutz mit voller Flexibilität ist ein Angebot der <br />
+        VersicherungLebensversicherungs-AG.<br />
+
+
+        Testergebnisse mit Auszeichnung (Auszug) und Quellen der Siegel:<br />
+        RisikoLebensversicherung Basisschutz:<br />
+
+        Rating Produkt, Focus Money, Ausgabe 19/2016, Testsieger (mit anderen)<br />
+        Rating Produkt, Capital, Ausgabe 9/2016<br />
+        Rating Produkt, biallo.de und Magazin Guter Rat, Ausgabe 1/2016<br />
+        Rating Produkt, Focus Money, Ausgabe 16/2015, alleiniger Testsieger<br />
+        Rating Produkt, Focus Money, Ausgabe 14/2014, alleiniger Testsieger<br />
+        Rating Produkt, Focus Money, Ausgabe 17/2013, günstigster Risikoschutz<br />
+        Rating Produkt, Focus Money, Ausgabe 12/2012, alleiniger Testsieger<br />
+        Rating Produkt, Focus Money, Ausgabe 16/2011, alleiniger Testsieger
+        Rating Produkt, Focus Money, Ausgabe 13/2010, alleiniger Testsieger
+
+        <table class="table table-hover table-striped">
+
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Nachname</th>
+                    <th>Adresse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Edwin1</td>
+                    <td>Smidth1</td>
+                    <td>Dorwegshöh str</td>
+                </tr>
+
+                <tr>
+                    <td>Edwin2</td>
+                    <td>Smidth2</td>
+                    <td>Dorwegshöh str</td>
+                </tr>
+
+                <tr>
+                    <td>Edwin3</td>
+                    <td>Smidth3</td>
+                    <td>Dorwegshöh str</td>
+                </tr>
+            </tbody>
+
+
+        </table>
+
+
+        <!--img-div--->
+        <div id="img-div" style="width:100%;  height:auto;">
+            <div id="img1" style="height:150px; width:33.33%; overflow:hidden; float:left">
+                <img src="/Images/kinder2.jpg" style="width:95%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img2" style="height:150px; width:33.33%; overflow:hidden; float:left">
+                <img src="/Images/laptop2.jpg" style="width:95%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img3" style="height:150px; width:33.33%; overflow:hidden; float:left">
+                <img src="/Images/nature_background6.jpg" style="width:95%;  height:120px; margin-left:1%;" />
+            </div>
+
+        </div>
+
+
+
+        <!--img-div-smart-->
+        <div id="img-div-smart" style="display:none; width:100%;  height:auto;">
+            <div id="img1" style="height:150px; width:100%; overflow:hidden;">
+                <img src="/Images/kinder2.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img2" style="height:150px; width:100%; overflow:hidden;">
+                <img src="/Images/laptop2.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img3" style="height:150px; width:100%; overflow:hidden; ">
+                <img src="/Images/nature_background6.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+        </div>
+
+    </div> <!--end of panel body-->
+
+</div> <!--end of panel1-->
+
+
+ <!--panel 2-->
+
+<div id="relative-parent2" class="panel panel-default" style="position:relative; margin-left:0px; margin-right:0px; margin-top:50px; height:auto;background-color:#f6f6f6">
+
+    <!--relative-child-->
+    <div id="relative-child2" class="panel-heading" style=" position:relative; margin-left:20px; margin-right:20px; margin-top:15px; margin-bottom:15px; background-color:white; ">
+
+        <!--a href-->
+        <a id="glyphicon2" data-toggle="collapse" href="#collapse-tablet2"
+           style="text-decoration:none;display:table-cell; width:1020px; font-size:1.2em; outline:none;
+                               color:#000;  margin-left:22%; ">
+
+
+            <p style="margin-left:20px;">
+                Allgemeine Versicherung bietet 
+            </p>
+
+            <p style="margin-top:-20px;">
+                <span style=" margin-left:97%; color:darkgray" class="glyphicon glyphicon-plus"></span>
+            </p>
+
+
+            <p style="margin-top:-20px; margin-left:20px;">
+                zwei Risikolebensversicherungsprodukte an
+            </p>
+
+        </a>
+
+    </div>
+
+    <!-------------------------------------->
+    <script type="text/javascript">
+
+                $(document).ready(function () {
+
+                    $("#glyphicon2").click(function () {
+
+                        if ($("#glyphicon2 > p:nth-of-type(2) > span").attr('class') != "glyphicon glyphicon-minus") {
+
+                            $("#glyphicon2 > p:nth-of-type(2) span").attr("class", "glyphicon glyphicon-minus");
+                        }
+
+                        else {
+
+                            $("#glyphicon2 > p:nth-of-type(2) span").attr("class", "glyphicon glyphicon-plus");
+                        }
+
+                    });
+
+                });
+
+    </script>
+    <!-------------------------------------->
+    <!--panel body 1-->
+    <div class="panel-body collapse" id="collapse-tablet2" style="width:100%; height:auto; margin-top:0px; margin-left:0%; background-color:white">
+        <p>
+            Nachfolgend finden Sie die Quellen der Siegel und weiterer Bewertungen, die wir auf dieser
+            Webseite angegeben haben. Weiterhin können Sie der Auflistung auch zusätzliche Auszeichnungen
+            und Gütesiegel entnehmen, welche die hohe Qualität unserer Produkte belegen.
+            Die Versicherung bietet zwei Risikolebensversicherungsprodukte an:
+            Die RisikoLebensversicherung als günstiger Basisschutz ist ein Angebot der Deutschen
+            Lebensversicherungs-AG, einem Unternehmen der deutschen Versicherung.
+
+        </p>
+
+        <!--img-div-smart-->
+        <div id="img-div-smart" style="display:none; width:100%;  height:auto;">
+            <div id="img1" style="height:150px; width:100%; overflow:hidden;">
+                <img src="/Images/kinder2.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img2" style="height:150px; width:100%; overflow:hidden;">
+                <img src="/Images/laptop2.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+            <div id="img3" style="height:150px; width:100%; overflow:hidden; ">
+                <img src="/Images/nature_background6.jpg" style="width:75%;  height:120px; margin-left:1%;" />
+            </div>
+
+        </div>
+
+    </div> <!--end of panel body-->
+
+</div> <!--end of panel1-->
+
+
+  <!--youtube-div-->
+<div id="youtube-div" style=" position:relative; margin-top:50px;  width:163%; z-index:999; height:40px; margin-left:-350px; border-bottom:1px solid gray; background-color:#eeeeee">
+  
+    <ul id="youtube-ul">
+        <li><a href="https://www.facebook.com/Delico%C5%9F-M%C3%BCzik-Evi-152614664807686/?ref=aymt_homepage_panel"><img src="~/images/facebook.jpg" style="width:25px; height:auto;" /></a></li>
+        <li><a href="https://twitter.com/"><img src="~/images/twitter2.png" style="width:30px; height:auto;" /></a></li>
+        <li><a href="https://www.youtube.com/channel/UCOowsGn9h4CebWYVPi6phag"><img src="~/images/youtube2.png" style="width:45px; height:40px;" /></a></li>
+    </ul>
+
+</div>
+
+
+
+
+<div id="youtube-div-tablet" style=" position:relative; display:none; margin-top:50px; width:100%; z-index:999; height:40px;  border-bottom:1px solid gray; background-color:#eeeeee">
+
+    <div style="position:absolute; z-index:999999; width:200px; height:40px; top:7px;  right:20px;">
+        <ul id="youtube-ul-tablet">
+            <li><a href="https://www.facebook.com/Delico%C5%9F-M%C3%BCzik-Evi-152614664807686/?ref=aymt_homepage_panel"><img src="~/images/facebook.jpg" style="width:25px; height:auto;" /></a></li>
+            <li><a href="https://twitter.com/"><img src="~/images/twitter2.png" style="width:30px; height:auto;" /></a></li>
+            <li><a href="https://www.youtube.com/channel/UCOowsGn9h4CebWYVPi6phag"><img src="~/images/youtube2.png" style="width:45px; height:40px;" /></a></li>
+        </ul>
+    </div>
+
+</div>
+
+ 
+
+
+
+
+
+<!--===========================================================================================-->
+
+<style type="text/css">
+
+   
+
+     
+
+     
+    #youtube-ul {
+        position:absolute;
+        z-index:999999;
+        top:-1px;
+        right:282px;
+    }
+
+        #youtube-ul > li {
+            list-style: none;
+            margin-right: 10px;
+            float: left;
+            width: 35px;
+            line-height: 40px;
+        }
+
+    #youtube-ul-tablet {
+    
+
+    }
+
+    #youtube-ul-tablet > li {
+
+        list-style:none;
+        float:left;
+        width:35px;
+    }
+
+
+
+    #ul-div-item1 {
+        margin-left: 1px;
+        list-style: none;
+        font-size: 16px;
+        text-decoration: none;
+        font-family: Arial;
+
+    } 
+
+
+
+    #ul-div-item1-background {
+        position: absolute; 
+        width: 300px;
+        height: 300px;
+        top: 30px; 
+        left: 660px;
+        z-index: 1;
+        background-color: darkblue; 
+        opacity: 0.8;
+        overflow: hidden;
+    }
+
+
+
+        #ul-div-item1-background:after {
+        
+            content:'';
+            position:absolute; 
+            right:0;
+            top:0px;
+            border-right:50px solid white;
+            border-top:50px solid darkblue;
+            transform:rotate(90deg); 
+        }
+
+
+
+
+    #ul-div-item2-background {
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        top: 30px;
+        left: 660px;
+        z-index: 1;
+        background-color: #0094cc;
+        opacity: 0.8;
+        overflow: hidden;
+    }
+
+
+         
+        #ul-div-item2-background:after {
+             
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0px;
+            border-right: 50px solid white;
+            border-top: 50px solid #0094cc;  
+            transform: rotate(90deg); 
+
+        }
+
+
+ 
+    #ul-div-item3-background { 
+        position: absolute;   
+        width: 300px;  
+        height: 300px;  
+        top: 30px;
+        left: 660px;
+        z-index: 1;
+        background-color: white;
+        opacity: 0.8;
+        overflow: hidden;
+    }
+
+
+
+        #ul-div-item3-background:after {
+            content: ''; 
+            position: absolute;
+            /*to take nagtive right coordinate*/   
+            right: -35px;
+            /*to take negative top coordinate*/
+            top: -35px;
+            /*the length of width must be in double size as the negative coordinate to have real length*/ 
+            width: 70px;
+            /*the length of  height must be in double size as the negative coordinate to have real length*/
+            height: 70px;
+            /*it must be rotated in 45 degree*/
+            transform: rotate(45deg);
+            /*and at last background color of the cutting edge*/
+            background-color: #120f65;
+        }
+
+
+
+
+
+</style>
+
+
+
+
+
+            @section scripts
+{
+
+                <link href="~/Content/Index.css" rel="stylesheet" />
+
+                <link href="~/Content/bootstrap.css" rel="stylesheet" />
+
+                <!--for texillate in any cshtml page must these three bibliotheks be attached / included-->
+                <link href="~/Scripts/animate.css" rel="stylesheet" />
+                <script src="~/Scripts/jquery.textillate.js"></script>
+                <script src="~/Scripts/jquery.lettering.js"></script>
+
+                <script type="text/javascript">
+
+                    $(document).ready(function () {
+
+
+                        $("#myCarousel").carousel({
+
+                            interval: '3000'
+
+                        });
+
+
+                        //=====================================
+
+                        //left-menu
+                        $("#left-menu > li, #left-menu2 > li, left-menu3  ").bind("mouseover", function () {
+                            $(this).css({ 'background-color': '#0094ff' });
+
+                        });
+
+                        $("#left-menu > li").bind("mouseleave", function () {
+
+                            if ($(this).attr('class') != 'active') {
+                                $(this).css({ 'background-color': 'white' });
+                            }
+
+                        });
+
+                        //===========================
+
+                        //$(window).resize(function () {
+
+
+                        //    $("#ul-div-wrapper1").css('left', '-=2px');
+
+                        //    $("#ul-div-item1-background").css('left', '-=2px');
+                        //});
+                       
+                    }); // end of jquery
+
+
+
+                </script>
+
+            }
+
+

@@ -1,0 +1,383 @@
+﻿
+#youtube-div {
+    display: block !important;
+}
+
+
+
+
+
+
+
+
+#hr-div {
+    display: none !important;
+}
+
+
+#registrierung-wrapper {
+    display: block !important;
+}
+
+
+/*ul-form*/
+.ul-form {
+    position: relative;
+    width: 100% !important;
+    padding-left: 10px;
+    padding-top: 30px !important;
+    height: 50px;
+    z-index: 99999;
+    /*border:1px solid blue !important;*/
+    /*margin-top:100px;*/
+}
+
+
+    .ul-form > li {
+        list-style: none !important;
+        width: 33.33333% !important;
+        height: 50px;
+        float: left !important;
+        /*border:1px solid brown !important;*/
+    }
+
+        .ul-form > li > a {
+            color: green !important;
+        }
+
+
+
+        .ul-form > li:nth-child(3) {
+            padding-top: 10px !important;
+        }
+
+
+
+
+#ul-form-wrapper {
+    display: block !important;
+}
+
+
+.ul-form-tablet {
+    position: relative;
+    width: 100% !important;
+    padding-left: 10px;
+    /*padding-top: 30px !important;*/
+    height: 50px;
+    z-index: 99999;
+    /*border:1px solid blue !important;*/
+    /*margin-top:100px;*/
+}
+
+
+    .ul-form-tablet > li {
+        list-style: none !important;
+        width: 50% !important;
+        padding-bottom:30px;
+        height: 50px;
+   
+        float: left !important;
+        /*border:1px solid brown !important;*/
+    }
+
+        .ul-form-tablet > li > a {
+            color: green !important;
+            margin-top:40px;
+        }
+
+
+        .ul-form-tablet > li:nth-child(2) {
+            padding-top: 30px !important;
+        }
+
+
+
+
+
+
+/*.tooltip1 {
+   
+    position: absolute;
+    z-index: 9999998; 
+    background-color:darkseagreen;
+    width:200px;
+
+}*/
+
+
+.ui-tooltip {
+
+    background-color:#f6f5f4 !important;
+    z-index:99999 !important;
+    
+}
+
+
+.ui-dialog {
+
+    /*background-color:blue !important;*/
+    z-index:99999999!important;
+    height:200px;
+}
+
+
+
+#überschrift-smart {
+    display: none !important;
+}
+
+
+
+#youtube-ul-laptop {
+    display: block !important;
+
+    position:absolute !important;
+    top:1665px !important;
+    right:20px !important;
+    z-index:999999 !important;
+
+}
+
+    #youtube-ul-laptop > li {
+        list-style:none !important;
+        width:40px !important;
+        float:left !important;
+
+    }
+
+
+#youtube-div-laptop-background {
+    display: block !important;
+   
+}
+
+
+
+
+
+/*=================================1000 px========================================================================================*/
+@media only screen and (min-width:640px) and (max-width:1000px ) {
+    /*body {
+    
+        background-color:yellow !important;
+    }*/
+    #ul-div-item1-tablet-background {
+        display: none !important;
+    }
+
+
+
+
+    #ul-div-item1-tablet {
+        display: none !important;
+    }
+
+    #hr-div {
+        display: none !important;
+    }
+
+
+
+    #registrierung-wrapper {
+        display: none !important;
+    }
+
+
+
+
+    #youtube-div {
+
+
+        display: none !important;
+    }
+
+
+
+    #registrierung-wrapper-tablet {
+        display: block !important;
+    }
+
+
+
+    #überschrift-smart {
+        display:none!important;
+      
+    }
+
+
+    #ul-captcha {
+    
+ display:none !important;
+    }
+
+
+
+    #youtube-ul-tablet {
+    
+        display:block !important;
+
+        position:absolute !important;
+        z-index:9999999 !important;
+        top:1905px !important;
+        right:20px !important;
+    }
+
+    #youtube-ul-tablet > li {
+        list-style:none !important;
+        width:40px; 
+        float:left;
+    }
+
+    #youtube-div-tablet-background {
+        display: block !important;
+    }
+
+
+    #youtube-ul-laptop {
+    
+        display:none !important;
+    }
+
+
+    #youtube-div-laptop-background {
+    
+        display:none !important;
+    }
+ 
+
+}
+/*end of 1000 px*/
+
+/*=================================end of 1000 px=================================================================================*/
+
+
+
+
+
+/*===============================640 px========================================================================================*/
+@media (max-width:640px) {
+
+    /*body {
+    
+        background-color:blue !important;
+    }*/
+
+
+    #ul-div-item1-smart {
+        display: none !important;
+    }
+
+
+
+    #ul-div-item1-smart-background {
+        display: none !important;
+    }
+
+
+    #left-menu-smart {
+        display: none !important;
+    }
+
+
+    #index-wrapper-smart {
+        display: none !important;
+    }
+
+
+
+    #kfz-schaden-div-smart {
+        display: none !important;
+    }
+
+
+
+    #footer-menu-smart {
+        display: none !important;
+    }
+
+
+
+    #panel-wrapper-div {
+        display: none !important;
+    }
+
+
+
+    #krankenver-smart-wrapper {
+        display: none !important;
+    }
+
+
+
+    #registrierung-wrapper {
+        display: none !important;
+    }
+
+
+
+    #registrierung-wrapper-tablet {
+        display: block !important;
+    }
+
+
+    #überschrift1 {
+        display: block !important;
+        margin-top: 70px !important;
+    }
+
+
+
+    #registrierung-wrapper {
+        display: none !important;
+    }
+
+
+    #registrierung-wrapper-tablet {
+        display: none !important;
+    }
+
+
+    #youtube-div {
+        margin-top:200px !important;
+        display: none !important;
+    }
+
+
+
+
+ 
+
+    #überschrift1 {
+        display: none !important;
+    }
+
+    #überschrift-smart {
+        /*top:-210px;*/
+        display: block !important;
+    }
+
+
+
+    #registrierung-wrapper-smart {
+        display: block !important;
+        height:500px !important;
+    }
+
+
+
+    #registrierung-ahref-smart {
+    
+        display:block !important;
+    }
+
+
+    #youtube-div-smart {
+    
+        display:none !important;
+    }
+
+}
+/*end of 640 px*/
+
+/*=================================end of 640 px========================================================================================*/

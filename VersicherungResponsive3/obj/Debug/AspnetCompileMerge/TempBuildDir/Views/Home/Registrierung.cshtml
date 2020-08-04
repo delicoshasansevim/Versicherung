@@ -1,0 +1,1092 @@
+﻿@model VersicherungResponsive3.Models.Person
+@using CaptchaMvc.HtmlHelpers
+
+@{
+    ViewBag.Title = "Resitrierung1";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<!--============================================================register container================================================-->
+<!--Überschrift-->
+<div id="überschrift1" style="width:100%; height:180px;  margin-top:300px; ">
+
+    <p style="font-size:1.5em; padding-top:80px; font-weight:bolder; font-family:'Times New Roman'">
+        Ihr Zugang zu Meiner Versicherung
+    </p>
+
+    <p style="font-size:2.0em;  transform:scale(1,1.3) ">
+        Persönliche Zugangsdaten anfordern
+    </p>
+</div>
+
+
+
+
+
+
+<!--registrierung-wrapper-->
+<div id="registrierung-wrapper" style="position:relative;  display:none; width:100%; height:1000px; margin-top:0px; background-color:white; ">
+
+    <!--form-->
+
+
+    @using (Html.BeginForm("Registrierung", "Home", FormMethod.Post, new { style = "", id = "myForm" }))
+    {
+    
+
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+
+    <!--ul-form-->
+        <div id="ul-form-wrapper">
+
+
+            <ul class="ul-form">
+
+                <li>
+                    @Html.LabelFor(Model => Model.Benutzername)
+                </li>
+
+                <li>
+                    @*@Html.TextBoxFor(Model => Model.Benutzername, "", new { @class = "form-control", style = "max-width:100%;" })*@
+                    @Html.TextBoxFor(Model => Model.Benutzername, "", new { id = "myTooltip-benutzer", @class = "form-control", style = "height:35px; max-width:100%;", data_toggle = "tooltip", title = "" })
+
+
+                </li>
+
+                <li style="padding-left:100px; color:darkred">
+
+
+                    @Html.ValidationMessageFor(Model => Model.Benutzername, "", new {  })
+                </li>
+            </ul>
+
+
+
+            <ul class="ul-form">
+                <li>
+                    @Html.LabelFor(Model => Model.Passwort)
+                </li>
+
+                <li>
+                    @Html.TextBoxFor(Model => Model.Passwort, "", new { id = "myTooltip-passwort", @class = "form-control", style = "height:35px; max-width:100%;", data_toggle = "tooltip", title = "" })
+                </li>
+
+                <li style="padding-left:100px; color:darkred">
+                    @Html.ValidationMessageFor(Model => Model.Passwort)
+                </li>
+            </ul>
+
+
+
+
+            <!--ul-form-->
+
+            <ul class="ul-form">
+                <li> </li>
+                <li style="font-size:1.2em">Voruessetzung für Ihr Passwort:</li>
+            </ul>
+
+
+            <ul class="ul-form">
+                <li> </li>
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Länge 8-20 Zeichen</li>
+            </ul>
+
+            <ul class="ul-form">
+                <li> </li>
+
+                <li style="font-size:1.2em">Ihr passwort muss zusätzlich <span style="font-weight:bold"> 3 der <br /> folgenden Kriterieren </span> erfüllen: </li>
+            </ul>
+
+
+            <ul class="ul-form">
+                <li> </li>
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Großbuchstaben(A-Z)</li>
+            </ul>
+
+            <ul class="ul-form">
+                <li> </li>
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Kleinbuchstaben(A-Z)</li>
+            </ul>
+
+            <ul class="ul-form">
+                <li> </li>
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Ziffern(0-9)</li>
+            </ul>
+
+            <ul class="ul-form">
+                <li> </li>
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Sonderzeichen(!#$)</li>
+            </ul>
+
+
+
+            <!--passwort wiederholen-->
+            <ul class="ul-form">
+                <li>
+                    @Html.LabelFor(Model => Model.Passwordwiederholen)
+                </li>
+
+                <li>
+                    @Html.TextBoxFor(Model => Model.Passwordwiederholen, "", new { id = "myTooltip-passwortwiederholen", @class = "form-control", style = "height:35px; max-width:100%; ", data_toggle = "tooltip", title = "" })
+
+                </li>
+
+                <li style="padding-left:100px; color:darkred">
+                    @Html.ValidationMessageFor(Model => Model.Passwordwiederholen)
+                </li>
+            </ul>
+
+
+            <ul class="ul-form">
+                <li style="margin-top:25px;">@Html.LabelFor(Model => Model.Anrede) </li>
+
+                <li style="width:100%">
+
+                    
+                </li>
+
+
+            </ul>
+
+
+
+        </div> <!--end of ul-form-wrapper-->
+
+
+        <input type="submit" style="visibility:hidden; width:250px; " />
+
+    } <!--end of form-->
+
+
+    <!--button frau und herr-->
+    <button id="btn-frau" class="btn btn-default" style=" width:15%; height:30px; position:absolute; z-index:9999999; top:650px; left:34%; background-color:#f1f1f1">Frau &nbsp; <span class="" style="color:white"></span></button>
+    <button id="btn-herr" class="btn btn-default" style="width:15%; height:30px; position:absolute; z-index:9999999; top:650px; left:52%; background-color:#f1f1f1">Herr &nbsp;<span class="" style="color:white"></span></button>
+
+
+
+
+
+<div id="registrierung-dialog" style="background-color:#e5e5e5 ">
+    <p style="font-weight:bold">
+        This page is stil on construction !
+    </p>
+
+</div>
+
+  
+
+
+</div> <!--end of registrierung-wrapper-->
+
+
+<!--registrierung-wrapper-tablet-->
+<div id="registrierung-wrapper-tablet" style="position:relative; display:none; width:100%; height:1000px; margin-top:0px; background-color:white; ">
+
+
+    @using (Html.BeginForm("Registrierung", "Home", FormMethod.Post, new { style = "", id = "" }))
+    {
+
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
+
+    <!--ul-form-->
+
+
+
+        <div id="ul-form-tablet-wrapper" style="padding-top:50px;">
+
+
+            <ul class="ul-form-tablet">
+
+
+                <li>
+                    @Html.LabelFor(Model => Model.Benutzername)
+                 
+                    @Html.TextBoxFor(Model => Model.Benutzername, "", new { @class = "form-control", style = "max-width:100%;", id = "textBoxBenutzername-tablet" })
+                 </li>
+                <br /> 
+                <li style="padding-left:100px; color:darkred">
+
+                    <div id="tooltip-benutzername-tablet" style="position:absolute; display:none; left:52%; padding-left:10px; padding-top:20px; color:black; width:50%; height:100px; margin-top:-70px; background-color:#e5e5e5">
+                        <p style="font-size:1.3em; padding-left:10px;">
+                            Bitte tragen Sie <br /> den Benuzernamen ein
+                        </p>
+                    </div>
+
+
+
+                    @Html.ValidationMessageFor(Model => Model.Benutzername)
+                </li>
+            </ul>
+
+
+
+            <ul class="ul-form-tablet">
+                <li>
+                    @Html.LabelFor(Model => Model.Passwort)
+
+                    @Html.TextBoxFor(Model => Model.Passwort, "", new { @class = "form-control", style = "max-width:100%;", id = "textBoxPassword-tablet" })
+                </li>
+
+                <li style="padding-left:100px; color:darkred">
+
+                    <div id="tooltip-password-tablet" style="position:absolute; display:none; left:52%; padding-left:10px; padding-top:20px; color:black; width:50%; height:100px; margin-top:-70px; background-color:#e5e5e5">
+                        <p style="font-size:1.3em; padding-left:10px;">
+                            Bitte tragen Sie <br /> den password ein
+                        </p>
+                    </div>
+
+                    @Html.ValidationMessageFor(Model => Model.Passwort)
+                </li>
+            </ul>
+
+
+
+
+            <!--ul-form-->
+
+            <ul class="ul-form-tablet">
+
+                <li style="font-size:1.2em">Voruessetzung für Ihr Passwort:</li>
+            </ul>
+
+
+            <ul class="ul-form-tablet">
+
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Länge 8-20 Zeichen</li>
+            </ul>
+
+            <ul class="ul-form-tablet">
+
+
+                <li style="font-size:1.2em">Ihr passwort muss zusätzlich <span style="font-weight:bold"> 3 der <br /> folgenden Kriterieren </span> erfüllen: </li>
+            </ul>
+
+
+            <ul class="ul-form-tablet">
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Großbuchstaben(A-Z)</li>
+            </ul>
+
+            <ul class="ul-form-tablet">
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Kleinbuchstaben(A-Z)</li>
+            </ul>
+
+            <ul class="ul-form-tablet">
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Ziffern(0-9)</li>
+            </ul>
+
+            <ul class="ul-form-tablet">
+
+                <li style="font-size:1.2em; "><img src="~/Images/haekchen-gray2.jpg" style="width:6%; height:auto;margin-right:2%;" />Sonderzeichen(!#$)</li>
+            </ul>
+
+
+
+            <!--passwort wiederholen-->
+            <ul class="ul-form-tablet">
+                <li>
+                    @Html.LabelFor(Model => Model.Passwordwiederholen)
+
+                    @Html.TextBoxFor(Model => Model.Passwordwiederholen, "", new { @class = "form-control", style = "max-width:100%;", id = "Passwordwiederholen-tablet" })
+                </li>
+
+                <li style="padding-left:100px;">
+                    <div id="tooltip-passwordwiederholen-tablet" style="position:absolute; display:none; left:52%; padding-left:10px; padding-top:20px; color:black; width:50%; height:100px; margin-top:-70px; background-color:#e5e5e5">
+                        <p style="font-size:1.3em; padding-left:10px;">
+                            Bitte tragen Sie <br /> den Benuzernamen ein
+                        </p>
+                    </div>
+
+                    @Html.ValidationMessageFor(Model => Model.Passwordwiederholen)
+                </li>
+            </ul>
+
+            <input type="submit" style="visibility:hidden; width:250px; " />
+
+        </div> <!--end of ul-form-tablet-wrapper-->
+
+
+    } <!--end of form-->
+
+    @Html.LabelFor(Model => Model.Anrede, "", new { style="position:absolute, left:10px; top:600px;" })
+    <!--button frau und herr-->
+    <button id="btn-frau-tablet" class="btn btn-default" style=" width:23%; height:30px; position:absolute; z-index:9999999; top:700px; left:10px; background-color:#f1f1f1">Frau &nbsp; <span class="" style="color:white"></span></button>
+    <button id="btn-herr-tablet" class="btn btn-default" style="width:23%; height:30px; position:absolute; z-index:9999999; top:700px; left:26%; background-color:#f1f1f1">Herr &nbsp;<span class="" style="color:white"></span></button>
+
+
+
+</div>
+
+
+
+    <ul id="youtube-ul">
+        <li><a href="https://www.facebook.com/Delico%C5%9F-M%C3%BCzik-Evi-152614664807686/?ref=aymt_homepage_panel"><img src="~/images/facebook.jpg" style="width:25px; height:auto;" /></a></li>
+        <li><a href="https://twitter.com/"><img src="~/images/twitter2.png" style="width:30px; height:auto;" /></a></li>
+        <li><a href="https://www.youtube.com/channel/UCOowsGn9h4CebWYVPi6phag"><img src="~/images/youtube2.png" style="width:45px; height:40px;" /></a></li>
+    </ul>
+
+
+   <!--youtube-div-background-->
+     <div id="youtube-div-background" style="position:absolute; z-index:1; width:160%; left:-280px; height:40px; background-color:#efeded; top:1242px; border-bottom:1px solid gray;">
+
+    </div>
+
+
+
+
+
+
+<!--========================================================end of register container============================================-->
+<!--====================================================================================================================================-->
+
+
+@section Scripts
+{
+
+    <link href="~/Content/Index.css" rel="stylesheet" />
+
+    <link href="~/Content/registrierung.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    <script src="~/Content/jquery-blitzer/jquery-ui.js"></script>
+    <link href="~/Content/jquery-blitzer/jquery-ui.css" rel="stylesheet" />
+
+
+
+    <script src="~/Scripts/jquery-cycle-plugin.js"></script>
+
+    <script type="text/javascript">
+
+
+        jQuery(document).ready(function () {
+
+            $("#registrierung-dialog").dialog({
+
+                width: 290,
+                height: 170,
+ 
+
+                show:
+                {
+                    effect: 'blind',
+                    duration: 500
+                },
+                hide:
+                {
+                    effect: 'explode',
+                    duration: 200
+                },
+
+                modal: true,
+                buttons: {
+                    Ok: function () {
+                        $(this).dialog("close");
+                    }
+                }
+
+
+            });
+
+
+           
+  
+          
+           
+            //smartphone size
+            //$(window).on('resize', function (event) {
+                if ($(window).width() < 640 || $(window).width() > 480 ) {
+
+
+                    //var _href = document.location.pathname;
+                    //alert(_href);
+                    if (document.location.pathname == "/Home/Registrierung")
+                    {
+                        //$("#youtube-div-smart").css('background-color', 'lightblue');
+                        $("#youtube-div-smart").css('top', '700px');
+                        $("#youtube-div-smart").css('left', '0px');
+
+                     
+
+                        //$("#überschrift-smart").hide();
+                    
+
+                        //$("#youtube-ul").css('visibility', 'hidden');
+                        //$("#youtube-div-background").css('visibility', 'hidden');
+                       
+                    }
+                   
+                }
+                else {
+
+            }
+
+
+
+
+                if ($(window).width() < 640 || $(window).width() > 480) {
+
+
+                    //var _href = document.location.pathname;
+                    //alert(_href);
+                    if (document.location.pathname == "/Home/Index") {
+                     
+                        $("#registrierung-wrapper-smart").css('display','none');
+
+
+                    }
+
+                }
+                else {
+
+                }
+
+            //});
+
+
+            // tablet size
+            //$(window).on('resize', function (event) {
+            //    if ($(window).width() < 990 || $(window).width() > 640) {
+
+
+            //        var _href = document.location.pathname;
+                
+            //        if (_href == "/Home/Registrierung") {
+                    
+
+
+            //        }
+
+            //    }
+            //    else {
+
+            //    }
+
+            //});
+
+
+            //$(window).on('resize', function (event) {
+                if ($(window).width() < 1600 || $(window).width() > 990) {
+
+
+                    var _href = document.location.pathname;
+
+                    if (_href == "/Home/Registrierung") {
+                   
+                        //$("#ul-form-wrapper").css('background-color', 'teal'); //OK
+
+                        //$("#youtube-ul").css('background-color', 'lightblue'); // OK
+                        //$("#youtube-ul").css('margin-top', '-110px');
+                        //$("#youtube-div-background").css('display', 'block');
+
+                    }
+
+                }
+                else {
+
+                }
+
+            //});
+
+
+
+
+
+
+            $("#textBoxBenutzername-tablet").hover(function () {
+
+                $("#tooltip-benutzername-tablet").slideToggle();
+            });
+
+            $("#textBoxPassword-tablet").hover(function () {
+
+                $("#tooltip-password-tablet").slideToggle();
+            });
+
+            $("#Passwordwiederholen-tablet").hover(function () {
+
+                $("#tooltip-passwordwiederholen-tablet").slideToggle();
+            });
+
+
+
+
+            $("#ul1 > li:nth-child(2)").hover( function () {
+
+                setTimeout(function () {
+
+                    $("#eigen-tooltip-ul_form_tablet").slideToggle(200);
+
+
+                    $("#gray-arrow-left-benutzernamen-tooltip").toggle();
+
+                },150);
+
+
+            });
+
+
+
+            var flag = 0;
+
+            $("#btn-frau").on("click", function () {
+
+
+                if (flag == 0) {
+
+                    $("#btn-herr").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-frau").css({ 'color': 'white' });
+                    $("#btn-herr").css({ 'color': 'black' });
+
+                    $("#btn-herr > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-frau > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag = 1;
+                }
+
+
+            });
+
+
+
+            $("#btn-herr").on("click", function () {
+
+
+                if (flag == 0) {
+
+                    $("#btn-frau").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-herr").css({ 'color': 'white' });
+                    $("#btn-frau").css({ 'color': 'black' });
+
+                    $("#btn-frau > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-herr > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag = 1;
+                }
+
+            });
+
+
+
+
+
+            $("#btn-herr").on("click", function () {
+
+
+                if (flag == 1) {
+
+                    $("#btn-frau").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-herr").css({ 'color': 'white' });
+                    $("#btn-frau").css({ 'color': 'black' });
+
+                    $("#btn-frau > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-herr > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag = 0;
+                }
+
+            });
+
+
+
+
+            //---------------------btn-frau tablet-------------------------
+            
+            var flag_tablet = 0;
+
+            $("#btn-frau-tablet").on("click", function () {
+
+
+                if (flag_tablet == 0) {
+
+                    $("#btn-herr-tablet").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-frau-tablet").css({ 'color': 'white' });
+                    $("#btn-herr-tablet").css({ 'color': 'black' });
+
+                    $("#btn-herr-tablet > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-frau-tablet > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_tablet = 1;
+                }
+
+
+            });
+
+
+
+            $("#btn-herr-tablet").on("click", function () {
+
+
+                if (flag_tablet == 0) {
+
+                    $("#btn-frau-tablet").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-herr-tablet").css({ 'color': 'white' });
+                    $("#btn-frau-tablet").css({ 'color': 'black' });
+
+                    $("#btn-frau-tablet > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-herr-tablet > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_tablet = 1;
+                }
+
+            });
+
+
+
+
+
+            $("#btn-herr-tablet").on("click", function () {
+
+
+                if (flag_tablet == 1) {
+
+                    $("#btn-frau-tablet").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-herr-tablet").css({ 'color': 'white' });
+                    $("#btn-frau-tablet").css({ 'color': 'black' });
+
+                    $("#btn-frau-tablet > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-herr > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_tablet = 0;
+                }
+
+            });
+
+
+
+            //==================================================================
+
+            // btn ja
+            var flag_ja = 0;
+
+            $("#btn-ja").on("click", function () {
+
+                $("#select-option1").css({ 'display': 'block' });
+
+                $("#vertragsnummer").css({ 'display': 'block' });
+
+                $("#Geburtsdatum").css({ 'display': 'block' });
+
+                $("#checkbox-wrapper").css({ 'margin-top': '1300px' });
+
+                $("#container1").css({ 'height': '1750px' });
+
+                $("#Registerierung_wrapper").css({ 'height': '1750px', 'background-color': 'white' });
+
+                $("#ul-captcha > li").css({ 'top': '-100px' });
+
+
+
+
+
+                if (flag_ja == 0) {
+
+                    $("#btn-nein").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-fja").css({ 'color': 'white' });
+                    $("#btn-nein").css({ 'color': 'black' });
+
+                    $("#btn-nein > span").attr('class', '');
+                    vertragsnummer
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-ja > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_ja = 1;
+                }
+
+
+            });
+
+
+
+            $("#btn-nein").on("click", function () {
+
+                $("#select-option1").css({ 'display': 'none' });
+
+                $("#vertragsnummer").css({ 'display': 'none' });
+
+                $("#Geburtsdatum").css({ 'display': 'none' });
+
+                $("#checkbox-wrapper").css({ 'margin-top': '1150px' });
+
+                $("#container1").css({ 'height': '1600px' });
+
+                $("#Registerierung_wrapper").css({ 'height': '1600px', 'background-color': 'white' });
+
+
+
+
+                if (flag_ja == 0) {
+
+                    $("#btn-nein").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-nein").css({ 'color': 'white' });
+                    $("#btn-ja").css({ 'color': 'black' });
+
+                    $("#btn-ja > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-hnei > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_ja = 1;
+                }
+
+            });
+
+
+
+
+
+            $("#btn-nein").on("click", function () {
+
+
+                if (flag_ja == 1) {
+
+                    $("#btn-ja").css({ 'background-color': '#f1f1f1' });
+
+                    $("#btn-nein").css({ 'color': 'white' });
+                    $("#btn-ja").css({ 'color': 'black' });
+
+                    $("#btn-ja > span").attr('class', '');
+
+                    $(this).css({ 'background-color': '#0094ff' });
+
+                    $("#btn-nein > span").attr('class', 'glyphicon glyphicon-ok');
+
+                    flag_ja = 0;
+                }
+
+            });
+
+            //==============================================================
+
+            //$("#selectId").selectmenu();
+
+
+
+            //$(".ui-datepicker-trigger").css({'cursor':'pointer'});
+
+
+
+            $("#datepicker").datepicker({
+
+                buttonText: "Kalender",
+                numberOfMonths: 2,
+                showOn: "both",
+                buttonImage: '/Images/Calendar.png',
+                buttonImageOnly: true,
+                changeYear: true,
+                changeMonth: true,
+                minDate: new Date(1965, 1, 1),
+                maxDate: new Date(2050, 1, 1)
+
+            });
+
+
+            //$(".ui-datepicker-trigger").css("margin-left", "200px");
+
+            //$("#registrieren-btn").on("click", function () {
+
+            //    $("#ul-captcha").css({ 'margin-top:':'-50px;' });
+
+            //    $("#container1").css({ 'height': '1850px' });
+
+            //    $("#Registerierung_wrapper").css({ 'height': '1850px', 'background-color': 'white' });
+            //});
+
+
+
+            //======================================================
+
+            $("#myTooltip-benutzer").tooltip({
+
+
+                html: true,
+                content: "<span style='margin-top:10px;'>Tragen Sie den Benutzernamen ein</p>",
+
+                //track: true,
+                show: {
+
+                    effect: "explode",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10,
+                    width: 400
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+150"
+                }
+
+
+
+                //customClass: 'tooltip-custom'
+
+                //using: function (position, feedback ) {
+                //    $(this).css( 'background-color','yellow');
+
+                //}
+
+                //}).addClass("tooltip1");
+
+            });
+
+
+            $("#myTooltip-passwort").tooltip({
+
+
+                content: "<p style='margin-top:10px;'>Tragen Sie das Passwort ein</p>",
+
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+130"
+                }
+
+            });
+
+
+
+            $("#myTooltip-passwortwiederholen").tooltip({
+
+
+                content: "<p style='margin-top:10px;'>Holen Sie Passwort wieder</p>",
+
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10,
+                    speed: 100
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+125"
+                }
+
+            });
+
+            $("#myTooltip-vorname").tooltip({
+
+                content: "<p style='margin-top:10px'>Vorname eingeben</p>",
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+100"
+                }
+            });
+
+
+            $("#myTooltip-nachname").tooltip({
+
+                content: "<p style='margin-top:10px'>Nachname eingeben</p>",
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+105"
+                }
+
+            });
+
+
+            $("#myTooltip-email").tooltip({
+
+                content: "<p style='margin-top:10px'>Email Adresse eingeben</p>",
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+120"
+                }
+
+            });
+
+
+            $("#myTooltip-email-bestaetigen").tooltip({
+
+                content: "<p style='margin-top:10px'>Email Adresse bestaetigen</p>",
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+130"
+                }
+            });
+
+
+            $("#myTooltip-mobilfunknummer").tooltip({
+
+                content: "<p style='margin-top:10px'>Bitte die Mobilfunkummer eingeben</p>",
+
+                show: {
+                    effect: "slideDown",
+                    delay: 10
+                },
+                hide: {
+                    effect: "slideUp",
+                    delay: 10
+                },
+
+                position: {
+                    my: "top-16",
+                    at: "right+155"
+                }
+            });
+
+
+
+
+            //===============================================================
+
+
+            $("#ul-div").bind("click", function () {
+
+                alert("best insurance");
+            });
+
+
+            //left-menu
+            $("#left-menu > li, #left-menu2 > li").bind("mouseover", function () {
+                $(this).css({ 'background-color': '#0094ff' });
+
+            });
+
+            $("#left-menu > li").bind("mouseleave", function () {
+
+                if ($(this).attr('class') != 'active') {
+                    $(this).css({ 'background-color': 'white' });
+                }
+
+            });
+
+
+            $("#myTabs > li.active").show();
+
+            $("#myCarousel").carousel();
+
+            //===================================
+
+            $("#left-menu > li:nth-child(1) > a ").click(function () {
+
+                //$("#myCarousel").carousel();
+            });
+
+
+            $("#left-menu > li:nth-child(2) > a").click(function () {
+
+
+            });
+
+
+            $("#myTooltip-benutzer").on("focus", function () {
+
+                if ($("#myTooltip-benutzer").val() == '') {
+                    $("#benutzer-alert").css('display', 'block');
+                    $("#img1").css('display', 'block');
+
+                }
+
+            });
+
+
+
+            $("#left-menu > li:nth-child(3)").click(function () {
+
+            });
+
+
+
+
+                //=====================================
+
+
+    });
+
+
+
+    </script>
+} <!--end of script-->
